@@ -7,6 +7,7 @@ public class Reservation {
     private int numberOfNights;
     private boolean isWeekend;
 
+
     //    Add: Constructor Method (Function) -> Verb
     public Reservation(String roomType, int numberOfNights, boolean isWeekend) {
         this.roomType = roomType;
@@ -27,10 +28,18 @@ public class Reservation {
         return isWeekend;
     }
 
+    //    Add: Setters Method (Function) -> Verb
+    public void setRoomType(String roomType) {
+        this.roomType = roomType;
+    }
+
+    public void setNumberOfNights(int numberOfNights) {
+        this.numberOfNights = numberOfNights;
+    }
+
+    public void setIsWeekend(boolean isWeekend) {
+        this.isWeekend = isWeekend;
+    }
 
 
-
-
-
-//    Add: Setters Method (Function) -> Verb
 }
