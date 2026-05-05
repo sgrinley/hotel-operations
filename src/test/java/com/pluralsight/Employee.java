@@ -19,11 +19,28 @@ public class Employee {
         this.hoursWorked = hoursWorked;
     }
 
+    //    Add: Derived Getters
+    public double getRegularHours() {
+        if (hoursWorked > 40) {
+            return 40;
+        }
+        return hoursWorked;
+    }
 
+    //    Overtime Hours
+    public double getOverTimeHours() {
+        if (hoursWorked >40) {
+            return hoursWorked - 40;
+        }
+        return 0;
+    }
 
+    //    Total Pay
+    public double getTotalPay() {
+        double regularPay = getRegularHours() * payRate;
+        double overTimePay = getOverTimeHours() * payRate * 1.5;
 
+        return regularPay + overTimePay;
+    }
 
-
-//    Add: Getters Method (Function) -> Verb
-//    Add: Setters Method (Function) -> Verb
 }
