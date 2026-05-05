@@ -2,7 +2,7 @@ package com.pluralsight;
 
 public class Room {
 
-    //      Step 1: Add Variables
+    //      Step 1: Add Variables (Noun)
     private int NumberOfBeds;
     private double Price;
     private boolean Occupied;
@@ -18,7 +18,7 @@ public class Room {
 
     }
 
-    //      Step 3: Add Getters Method
+    //      Step 3: Add Getters Method (Verb)
     public int getNumberOfBeds() {
         return NumberOfBeds;
     }
@@ -39,7 +39,7 @@ public class Room {
     }
 
 
-    //      Step 4: Add Setters
+    //      Step 4: Add Setters Method (Verb)
     public void setNumberOfBeds(int numberOfBeds) {
         NumberOfBeds = numberOfBeds;
     }
