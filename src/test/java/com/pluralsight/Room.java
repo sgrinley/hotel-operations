@@ -10,7 +10,7 @@ public class Room {
 
 
     //      Step 2: Add Constructor Method
-    public Room(int numberOfBeds, double price, boolean occupied, boolean dirty, boolean available) {
+    public Room(int numberOfBeds, double price, boolean occupied, boolean dirty) {
         this.NumberOfBeds = numberOfBeds;
         this.Price = price;
         this.Occupied = occupied;
