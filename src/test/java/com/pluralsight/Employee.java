@@ -6,7 +6,7 @@ public class Employee {
     private int employeeId;
     private String name;
     private String department;
-    private double payRat;
+    private double payRate;
     private double hoursWorked;
 
 
@@ -15,7 +15,7 @@ public class Employee {
         this.employeeId = employeeId;
         this.name = name;
         this.department = department;
-        this.payRat = payRat;
+        this.payRate = payRate;
         this.hoursWorked = hoursWorked;
     }
 
