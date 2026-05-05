@@ -14,10 +14,23 @@ public class Reservation {
         this.isWeekend = isWeekend;
     }
 
+    //    Add: Getters Method (Function) -> Verb
+    public String getRoomType() {
+        return roomType;
+    }
+
+    public int getNumberOfNights() {
+        return numberOfNights;
+    }
+
+    public boolean isWeekend() {
+        return isWeekend;
+    }
 
 
 
 
-//    Add: Getters Method (Function) -> Verb
+
+
 //    Add: Setters Method (Function) -> Verb
 }
