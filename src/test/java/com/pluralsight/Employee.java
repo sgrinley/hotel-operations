@@ -11,7 +11,7 @@ public class Employee {
 
 
     //    Add: Constructor Method (Function) -> Verb
-    public Employee(int employeeId, String name, String department, double payRat, double hoursWorked) {
+    public Employee(int employeeId, String name, String department, double payRate, double hoursWorked) {
         this.employeeId = employeeId;
         this.name = name;
         this.department = department;
