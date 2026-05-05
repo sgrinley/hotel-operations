@@ -45,10 +45,10 @@ public class Reservation {
     public double getPrice() {
         double basePrice;
 
-        if (roomType.equalsIgnoreCase("king")) {
+        if (roomType.equalsIgnoreCase("King")) {
             basePrice = 139.00;
         } else {
-            basePrice = 124.00;
+            basePrice = 124.00; // "Double"
         }
 
         if (isWeekend) {
