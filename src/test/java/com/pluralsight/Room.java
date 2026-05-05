@@ -3,58 +3,84 @@ package com.pluralsight;
 public class Room {
 
     //      Step 1: Add Variables (Noun)
-    private int NumberOfBeds;
-    private double Price;
-    private boolean Occupied;
-    private boolean Dirty;
+    private int numberOfBeds;
+    private double price;
+    private boolean occupied;
+    private boolean dirty;
 
 
     //      Step 2: Add Constructor Method
     public Room(int numberOfBeds, double price, boolean occupied, boolean dirty) {
-        this.NumberOfBeds = numberOfBeds;
-        this.Price = price;
-        this.Occupied = occupied;
-        this.Dirty = dirty;
+        this.numberOfBeds = numberOfBeds;
+        this.price = price;
+        this.occupied = occupied;
+        this.dirty = dirty;
 
     }
 
     //      Step 3: Add Getters Method (Verb)
     public int getNumberOfBeds() {
-        return NumberOfBeds;
+        return numberOfBeds;
     }
     public double getPrice() {
-        return Price;
+        return price;
     }
 
     public boolean isOccupied() {
-        return Occupied;
+        return occupied;
     }
 
     public boolean isDirty() {
-        return Dirty;
+        return dirty;
     }
 
     public boolean isAvailable() {
-        return !Occupied && !Dirty;   // Derived Getter
+        return !occupied && !dirty;   // Derived Getter
     }
 
 
     //      Step 4: Add Setters Method (Verb)
     public void setNumberOfBeds(int numberOfBeds) {
-        NumberOfBeds = numberOfBeds;
+        this.numberOfBeds = numberOfBeds;
     }
 
     public void setPrice(double price) {
-        Price = price;
+        this.price = price;
     }
 
     public void setOccupied(boolean occupied) {
-        Occupied = occupied;
+        this.occupied = occupied;
     }
 
     public void setDirty(boolean dirty) {
-        Dirty = dirty;
+        this.dirty = dirty;
 
+    }
+
+    public void checkIn() {
+        if (!isAvailable()) {
+            System.out.println("Room is not available for check-in! ");
+            return;
+        }
+        occupied = true;
+        dirty = true;
+    }
+
+    public void checkOut() {
+        if (!occupied) {
+            System.out.println("Room is vacant! ");
+            return;
+        }
+        occupied = false;
+        dirty = true;
+    }
+
+    public void cleanRoom() {
+        if (!dirty) {
+            System.out.println("Room is already clean! ");
+            return;
+        }
+        dirty = false;
     }
 
 }

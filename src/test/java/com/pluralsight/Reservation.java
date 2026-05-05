@@ -2,6 +2,11 @@ package com.pluralsight;
 
 public class Reservation {
 
+    //    Add: Constants
+    public static final String KING = "king";
+    public static final String QUEEN = "queen";
+    public static final String DOUBLE = "double";
+
     //    Add: Variable (Store Data) -> Noun
     private String roomType; //    { King/Double }
     private int numberOfNights;
@@ -10,7 +15,7 @@ public class Reservation {
 
     //    Add: Constructor Method (Function) -> Verb
     public Reservation(String roomType, int numberOfNights, boolean isWeekend) {
-        this.roomType = roomType;
+        this.roomType = roomType.toLowerCase();
         this.numberOfNights = numberOfNights;
         this.isWeekend = isWeekend;
     }
@@ -30,7 +35,7 @@ public class Reservation {
 
     //    Add: Setters Method (Function) -> Verb
     public void setRoomType(String roomType) {
-        this.roomType = roomType;
+        this.roomType = roomType.toLowerCase();
     }
 
     public void setNumberOfNights(int numberOfNights) {
@@ -41,27 +46,29 @@ public class Reservation {
         this.isWeekend = isWeekend;
     }
 
-    //    Derived Getter
+    //    Derived Getter (Pricing Logic)
     public double getPrice() {
         double basePrice;
 
-        if (roomType.equalsIgnoreCase("King")) {
+        if (roomType.equals(KING)) {
             basePrice = 139.00;
+
+        } else if (roomType.equals(QUEEN)) {
+            basePrice = 129.00;   // NEW TYPE
+
         } else {
-            basePrice = 124.00; // "Double"
+            basePrice = 124.00;   // DOUBLE (default)
         }
 
         if (isWeekend) {
-            basePrice *= 1.10; // add 10%
+            basePrice *= 1.10;
         }
 
         return basePrice;
     }
 
-    //    Add: Total Reso Cost
+    // Total cost
     public double getReservationTotal() {
         return getPrice() * numberOfNights;
-
     }
-
 }

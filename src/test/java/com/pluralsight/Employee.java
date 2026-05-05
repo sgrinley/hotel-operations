@@ -8,6 +8,7 @@ public class Employee {
     private String department;
     private double payRate;
     private double hoursWorked;
+    private int punchInTime;
 
 
     //    Add: Constructor Method (Function) -> Verb
@@ -20,6 +21,7 @@ public class Employee {
     }
 
     //    Add: Derived Getters
+    //    Regular Hours
     public double getRegularHours() {
         if (hoursWorked > 40) {
             return 40;
@@ -29,7 +31,7 @@ public class Employee {
 
     //    Overtime Hours
     public double getOverTimeHours() {
-        if (hoursWorked >40) {
+        if (hoursWorked > 40) {
             return hoursWorked - 40;
         }
         return 0;
@@ -41,6 +43,22 @@ public class Employee {
         double overTimePay = getOverTimeHours() * payRate * 1.5;
 
         return regularPay + overTimePay;
+    }
+
+    //    Punch-In
+    public void punchIn(int time) {
+        punchInTime = time;
+    }
+
+    //    Punch-Out
+    public void punchOut(int time) {
+        if (time < punchInTime) {
+            System.out.println("Error! Invalid punch out time. ");
+            return;
+        }
+        int hoursWorkedToday = time - punchInTime;
+        hoursWorked += hoursWorkedToday;
+        punchInTime = 0;
     }
 
 }
