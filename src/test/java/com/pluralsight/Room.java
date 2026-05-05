@@ -9,7 +9,6 @@ public class Room {
     private boolean Dirty;
 
 
-
     //      Step 2: Add Constructor Method
     public Room(int numberOfBeds, double price, boolean occupied, boolean dirty, boolean available) {
         this.NumberOfBeds = numberOfBeds;
@@ -23,7 +22,6 @@ public class Room {
     public int getNumberOfBeds() {
         return NumberOfBeds;
     }
-
     public double getPrice() {
         return Price;
     }
@@ -37,10 +35,26 @@ public class Room {
     }
 
     public boolean isAvailable() {
-        return !Occupied && !Dirty;
+        return !Occupied && !Dirty;   // Derived Getter
     }
 
 
     //      Step 3: Add Setters
+    public void setNumberOfBeds(int numberOfBeds) {
+        NumberOfBeds = numberOfBeds;
+    }
+
+    public void setPrice(double price) {
+        Price = price;
+    }
+
+    public void setOccupied(boolean occupied) {
+        Occupied = occupied;
+    }
+
+    public void setDirty(boolean dirty) {
+        Dirty = dirty;
+
+    }
 
 }
