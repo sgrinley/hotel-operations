@@ -11,6 +11,13 @@ public class Room {
 
 
     //      Step 2: Add Constructor
+    public Room(int numberOfBeds, double price, boolean occupied, boolean dirty, boolean available) {
+        NumberOfBeds = numberOfBeds;
+        Price = price;
+        Occupied = occupied;
+        Dirty = dirty;
+        Available = available;
+    }
 
 
     //      Step 3: Add Getters
