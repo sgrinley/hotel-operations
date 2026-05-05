@@ -12,15 +12,35 @@ public class Room {
 
     //      Step 2: Add Constructor
     public Room(int numberOfBeds, double price, boolean occupied, boolean dirty, boolean available) {
-        NumberOfBeds = numberOfBeds;
-        Price = price;
-        Occupied = occupied;
-        Dirty = dirty;
-        Available = available;
+        this.NumberOfBeds = numberOfBeds;
+        this.Price = price;
+        this.Occupied = occupied;
+        this.Dirty = dirty;
+        this.Available = available;
+    }
+
+    //      Step 3: Add Getters
+    public int getNumberOfBeds() {
+        return NumberOfBeds;
+    }
+
+    public double getPrice() {
+        return Price;
+    }
+
+    public boolean isOccupied() {
+        return Occupied;
+    }
+
+    public boolean isDirty() {
+        return Dirty;
+    }
+
+    public boolean isAvailable() {
+        return Available;
     }
 
 
-    //      Step 3: Add Getters
 
 
     //      Step 3: Add Setters
