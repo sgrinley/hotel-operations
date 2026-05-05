@@ -39,7 +39,7 @@ public class Room {
     }
 
 
-    //      Step 3: Add Setters
+    //      Step 4: Add Setters
     public void setNumberOfBeds(int numberOfBeds) {
         NumberOfBeds = numberOfBeds;
     }
