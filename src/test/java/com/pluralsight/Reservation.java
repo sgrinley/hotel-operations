@@ -41,5 +41,22 @@ public class Reservation {
         this.isWeekend = isWeekend;
     }
 
+    //    Derived Getter
+    public double getPrice() {
+        double basePrice;
+
+        if (roomType.equalsIgnoreCase("king")) {
+            basePrice = 139.00;
+        } else {
+            basePrice = 124.00;
+        }
+
+        if (isWeekend) {
+            basePrice *= 1.10; // add 10%
+        }
+
+        return basePrice;
+    }
+
 
 }
