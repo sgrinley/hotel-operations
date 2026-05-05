@@ -58,5 +58,10 @@ public class Reservation {
         return basePrice;
     }
 
+    //    Add: Total Reso Cost
+    public double getReservationTotal() {
+        return getPrice() * numberOfNights;
+
+    }
 
 }
