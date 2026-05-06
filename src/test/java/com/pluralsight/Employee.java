@@ -22,7 +22,17 @@ public class Employee {
         this.payRate = payRate;
         this.hoursWorked = hoursWorked;
     }
-
+    //    Add: 2nd Constructor Method
+    public Employee(int employeeId, String name, String department, double payRate) {
+        this.employeeId = employeeId;
+        this.name = name;
+        this.department = department;
+        this.payRate = payRate;
+        this.hoursWorked = 0;
+    }
+    public double getHoursWorked() {
+        return hoursWorked;
+    }
     //    Add: Derived Getters
     //    Regular Hours
     public double getRegularHours() {
