@@ -26,8 +26,41 @@ public class Hotel {
         this.bookedBasicRooms = 0;
     }
 
+    public boolean bookRoom(int numberOfRoomsRequested, boolean isSuite) {
 
+        if (numberOfRoomsRequested <= 0) {
+            System.out.println("Invalid number of rooms requested.");
+            return false;
+        }
 
+        if (isSuite) {
+            int availableSuites = getAvailableSuites();
 
+            if (numberOfRoomsRequested <= availableSuites) {
+                bookedSuites += numberOfRoomsRequested;
+                return true;
+            } else {
+                System.out.println("Not enough suites available.");
+                return false;
+            }
 
-}
+        } else {
+            int availableRooms = getAvailableRooms();
+
+            if (numberOfRoomsRequested <= availableRooms) {
+                bookedBasicRooms += numberOfRoomsRequested;
+                return true;
+            } else {
+                System.out.println("Not enough basic rooms available.");
+                return false;
+            }
+        }
+    }
+
+    private int getAvailableRooms() {
+        return 0;
+    }
+
+    private int getAvailableSuites() {
+        return 0;
+    }
