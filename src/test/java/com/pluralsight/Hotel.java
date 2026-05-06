@@ -26,6 +26,7 @@ public class Hotel {
         this.bookedBasicRooms = 0;
     }
 
+//    Add: Booking Method
     public boolean bookRoom(int numberOfRoomsRequested, boolean isSuite) {
 
         if (numberOfRoomsRequested <= 0) {
@@ -57,10 +58,35 @@ public class Hotel {
         }
     }
 
-    private int getAvailableRooms() {
-        return 0;
+    // Add: Getters
+
+    public int getAvailableSuites() {
+        return numberOfSuites - bookedSuites;
     }
 
-    private int getAvailableSuites() {
-        return 0;
+    public int getAvailableRooms() {
+        return numberOfRooms - bookedBasicRooms;
     }
+
+    // ===== Optional Getters (Safe to include) =====
+
+    public String getName() {
+        return name;
+    }
+
+    public int getNumberOfSuites() {
+        return numberOfSuites;
+    }
+
+    public int getNumberOfRooms() {
+        return numberOfRooms;
+    }
+
+    public int getBookedSuites() {
+        return bookedSuites;
+    }
+
+    public int getBookedBasicRooms() {
+        return bookedBasicRooms;
+    }
+}
